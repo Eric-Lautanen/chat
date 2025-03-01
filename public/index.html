@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="/styles.css?v1.2">
+  <style>
+    .video-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    video { width: 200px; height: 150px; border: 1px solid #ccc; }
+    .user-item { display: flex; align-items: center; gap: 5px; }
+    .video-icon { width: 16px; height: 16px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAdElEQVR4AWP4//8/AzUBcQ8sB2I1AfEfBDEDEgAVQOwHIfZDEHsQiD0Q+34QYi8EsReE2AtC7AMh9oEQ+0CI/SDkAyH2gRD7QHj9H0TsAyH2gRD7QIg9IMQ+EGIfCLEXhNgHQuwDIfaBEPtAiH0gxD4QYi8AAAJ6LUzNZZu2AAAAAElFTkSuQmCC') no-repeat; display: none; }
+    .mute-btn { font-size: 12px; padding: 2px 5px; }
+  </style>
+</head>
+<body>
+  <div id="auth">
+    <form id="auth-form">
+      <input type="text" id="username" placeholder="Username" autocomplete="username">
+      <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+      <button type="button" id="register-btn">Register</button>
+      <button type="submit" id="login-btn">Login</button>
+      <input type="text" id="guest-name" placeholder="Guest Name (optional)">
+      <button type="button" id="guest-btn">Guest</button>
+    </form>
+  </div>
+  <div id="chat" style="display: none;">
+    <h2>Chatrooms</h2>
+    <div id="room-list"></div>
+    <input type="text" id="room-name" placeholder="New Room Name">
+    <button id="create-room-btn">Create Room</button>
+    <h3>Active Users in Room</h3>
+    <ul id="active-users"></ul>
+    <div id="messages"></div>
+    <input type="text" id="message-input" placeholder="Type a message">
+    <button id="send-message-btn">Send</button>
+    <button id="talk-btn">Push to Talk</button>
+    <button id="start-video-btn">Start Video</button>
+    <button id="stop-video-btn">Stop Video</button>
+    <div id="video-container" class="video-container"></div>
+    <a href="/admin.html">Admin Panel</a>
+    <button id="logout-btn">Logout</button>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+input, button {
+  margin: 5px;
+  padding: 5px;
+}
+
+#messages {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+#room-list, #user-list {
+  list-style: none;
+  padding: 0;
+}
+
+#room-list li, #user-list li {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+button {
+  cursor: pointer;
+}
+
+.talk-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.volume-slider {
+  width: 50px;
+  margin-left: 5px;
+}
